@@ -1,11 +1,12 @@
 html, body{
     font-family:Verdana;
+    font-size: 18px;
     margin:0;
     height:100%;
     box-sizing:border-box;
 }
 h1, h2, h3, h4, h5, h6{
-    font-family:'Segoe UI';
+    font-family: Helvetica;
 }
 .topnav{
     overflow:hidden;
@@ -60,28 +61,32 @@ h1, h2, h3, h4, h5, h6{
     color: white;
   }
   *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
-  
+
   .column {
-    margin-left:auto;
-    margin-right:auto;
-    width: 500px;
-    height: 700px;
     margin-bottom: 16px;
     padding: 0 8px;
   }
   
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    margin: 8px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
   }
+  
+  .img{
+    flex:30%;
+  }
+
   .container {
     padding: 0 16px;
+    flex:70%;
   }
   
   .container::after, .row::after {
-    content: "";
+    content:'';
     clear: both;
     display: table;
   }
@@ -100,16 +105,65 @@ h1, h2, h3, h4, h5, h6{
     text-align: center;
     cursor: pointer;
     width: 100%;
+    border-radius: 15px;
   }
   
   .button:hover {
     background-color: #555;
   }
+
+  .program{
+    list-style-type: square;
+    margin-left: -3%;
+  }
   
+  .light-green{
+    background-color: #d1ddd9;
+    height: 16px;
+    margin-left: 20px;
+    margin-top: -13px;
+    border-radius: 8px;
+  }
+
+  .green1{
+    background-color: #04aa6d;
+    width: 35%;
+    height: 16px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+  }
+
+  .green2{
+    background-color: #04aa6d;
+    width: 15%;
+    height: 16px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+  }
+
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
       display: block;
     }
   }
-  
+  @media (max-width: 600px) {
+    .topnav{
+        overflow:visible;
+    }
+    .card{
+      flex-direction: column;
+    }
+    .img{
+      margin-left: 50px;
+      padding-top: 20px;
+    }
+    .light-green{
+      margin-right: 35px;
+      margin-left: auto;
+    }
+  }
