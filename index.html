@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richard Akingbulugbe</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <nav class="topnav">
         <a href="#portfolio">PORTFOLIO</a>
-        <a href="#about">ABOUT</a>
         <a href="#services">SERVICES</a>
-        <a href="#contact">CONTACT</a>
+        <a href="#about">ABOUT</a>
+        <div class="me"><a>R.A.</a></div>
     </nav>
     <div class="hero-image">
         <div class="hero-text">
@@ -39,20 +41,53 @@
             <div class="container">
                 <h2>ME</h2>
                 <p class="title">CEO & Founder</p>
-                <p>Richard Akingbulugbe is a student of Federal Government College, Lagos. He is a front-end and back-end
-                    programmer who has a year of experience in vital and top programming languages like:
-                    <ul class="program">
+                <p>Richard Akingbulugbe is a student of Federal Government College, Lagos. He is a front-end and
+                    back-end
+                    programmer who has a year of experience in vital and top progaramming languages like:
+                <ul class="program">
                     <li>Python</li>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    </ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
                 </p>
-                <p>Please click the button below to call or send an email to us in the last section of this page.</p><br>
-                <p><button class="button">Contact</button></p>
-                <p><button class="button">Download Portfolio</button></p>
+                <p>Please click the button below send an email to us in the last section of this page.</p>
+                <br>
+                <p><button class="button" type="button" onclick="document.location='#contact'">Contact</button></p>
+                <p><button class="button" type="button" onclick="">Download Portfolio</button></p>
+            </div>
+        </div>
+    </div><br>
+    <div class="contain">
+        <div style="text-align:center">
+            <h2 id="contact">Contact Us</h2>
+            <p>Leave me a message:</p>
+        </div>
+        <div class="rows">
+            <div class="col">
+                <img src="https://www.w3schools.com/w3images/map.jpg" style="width:100%">
+            </div>
+            <div class="col">
+                <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                        <option value="nigeria">Nigeria</option>
+                    </select>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height:170px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </div>
     </div>
-      <p>1</p>
+
 </body>
+
 </html>
