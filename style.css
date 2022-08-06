@@ -1,117 +1,266 @@
-<!DOCTYPE html>
-<html lang="en">
+html,
+body {
+  font-family: Verdana;
+  font-size: 18px;
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Helvetica;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Akingbulugbe</title>
-    <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 17px;
+}
 
-<body>
-    <!--<nav class="topnav">
-        <a href="#portfolio">PORTFOLIO</a>
-        <a href="#services">SERVICES</a>
-        <a href="#about">ABOUT</a>
-        <div class="me"><a>R.A.</a></div>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-			<i class="fa fa-bars"></i>
-		</a>
-    </nav>-->
-	<div class="topnav" id="myTopnav">
-		<a href="">R.A</a>
-		<div class="topnav-right">
-			<a href="#about">ABOUT</a>
-			<a href="#services">SERVICES</a>
-			<a href="#portfolio">PORTFOLIO</a>
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-				<i class="fa fa-bars"></i>
-			</a>
-		</div>
-	</div>
-    <div class="hero-image">
-        <div class="hero-text">
-            <h1 style="font-size:50px;">I am Akingbulugbe Richard</h1>
-            <p>I'm a Full-stack developer</p>
-            <button type="button" onclick="alert('Page not yet available!')">Hire Me!</button>
-        </div>
-    </div>
-    <h2 style="text-align:center" id="about">ABOUT</h2>
-    <div class="column">
-        <div class="card">
-            <div class="img">
-                <img src="richie.jpg" alt="richie" style="width:75%; margin:16px 16px;">
-                <p style="padding-left:20px; margin-top:-15px;">HTML5</p>
-                <div class="light-green">
-                    <div class="green1">35%</div>
-                </div>
-                <p style="padding-left:20px; margin-top:5px;">CSS3</p>
-                <div class="light-green">
-                    <div class="green2">15%</div>
-                </div>
-                <p></p>
-            </div>
-            <div class="container">
-                <h2>ME</h2>
-                <p class="title">CEO & Founder</p>
-                <p>Richard Akingbulugbe is a student of Federal Government College, Lagos. He is a front-end and
-                    back-end
-                    programmer who has a year of experience in vital and top progaramming languages like:
-                <ul class="program">
-                    <li>Python</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-                </p>
-                <p>Please click the button below send an email to us in the last section of this page.</p>
-                <br>
-                <p><button class="button" type="button" onclick="document.location='#contact'">Contact</button></p>
-                <p><button class="button" type="button" onclick="">Download Portfolio</button></p>
-            </div>
-        </div>
-    </div><br>
-    <div class="contain">
-        <div style="text-align:center">
-            <h2 id="contact">Contact Us</h2>
-            <p>Leave me a message:</p>
-        </div>
-        <div class="rows">
-            <div class="col">
-                <img src="https://www.w3schools.com/w3images/map.jpg" style="width:100%">
-            </div>
-            <div class="col">
-                <form action="/action_page.php">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                    <label for="country">Country</label>
-                    <select id="country" name="country">
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                        <option value="nigeria">Nigeria</option>
-                    </select>
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.."
-                        style="height:170px"></textarea>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </div>
-    </div>
-	<script>
-		function myFunction() {
-			var x = document.getElementById("myTopnav");
-			if (x.className === "topnav") {
-				x.className += " responsive";
-			} else {
-			x.className = "topnav";
-			}
-		}
-	</script>
-</body>
+.topnav .icon {
+  display: none;
+}
 
-</html>
+/*.me{
+  float:left;
+}*/
+
+.topnav-right {
+  float: right;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a:active {
+  background-color: #04aa6d;
+  color: white;
+}
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("richie.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.column {
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img {
+  flex: 30%;
+}
+
+.container {
+  padding: 0 16px;
+  flex: 70%;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #04aa6d;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.program {
+  list-style-type: square;
+  margin-left: -3%;
+}
+
+.light-green {
+  background-color: #d1ddd9;
+  height: 16px;
+  margin-left: 20px;
+  margin-top: -13px;
+  border-radius: 8px;
+}
+
+.green1 {
+  background-color: #04aa6d;
+  width: 35%;
+  height: 16px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+}
+
+.green2 {
+  background-color: #04aa6d;
+  width: 15%;
+  height: 16px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.contain {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.col {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.rows:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+  }
+  .img {
+    margin-left: 50px;
+    padding-top: 20px;
+  }
+  .light-green {
+    margin-right: 35px;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav-right a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
