@@ -7,30 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richard Akingbulugbe</title>
     <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <!--<nav class="topnav">
+    <div class="topnav">
         <a href="#portfolio">PORTFOLIO</a>
         <a href="#services">SERVICES</a>
         <a href="#about">ABOUT</a>
         <div class="me"><a>R.A.</a></div>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-			<i class="fa fa-bars"></i>
-		</a>
-    </nav>-->
-	<div class="topnav" id="myTopnav">
-		<a href="">R.A</a>
-		<div class="topnav-right">
-			<a href="#about">ABOUT</a>
-			<a href="#services">SERVICES</a>
-			<a href="#portfolio">PORTFOLIO</a>
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-				<i class="fa fa-bars"></i>
-			</a>
-		</div>
-	</div>
+    </div>
+    <div class="nav">
+        <a href="#home" class="active">R.A.</a>
+        <div id="myLinks">
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#services">SERVICES</a>
+            <a href="#about">ABOUT</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
     <div class="hero-image">
         <div class="hero-text">
             <h1 style="font-size:50px;">I am Akingbulugbe Richard</h1>
@@ -58,14 +55,14 @@
                 <p class="title">CEO & Founder</p>
                 <p>Richard Akingbulugbe is a student of Federal Government College, Lagos. He is a front-end and
                     back-end
-                    programmer who has a year of experience in vital and top progaramming languages like:
+                    programmer who has a year of experience in vital and top programming languages like:
                 <ul class="program">
                     <li>Python</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
                 </ul>
                 </p>
-                <p>Please click the button below send an email to us in the last section of this page.</p>
+                <p>Please click the button below to send an email to us in the last section of this page.</p>
                 <br>
                 <p><button class="button" type="button" onclick="document.location='#contact'">Contact</button></p>
                 <p><button class="button" type="button" onclick="">Download Portfolio</button></p>
@@ -74,12 +71,12 @@
     </div><br>
     <div class="contain">
         <div style="text-align:center">
-            <h2 id="contact">Contact Us</h2>
+            <h2 id="contact">Contact Me</h2>
             <p>Leave me a message:</p>
         </div>
         <div class="rows">
             <div class="col">
-                <img src="https://www.w3schools.com/w3images/map.jpg" style="width:100%">
+                <img src="https://www.w3schools.com/w3images/map.jpg" style="width:100%" alt="Aerial view">
             </div>
             <div class="col">
                 <form action="/action_page.php">
@@ -102,16 +99,17 @@
             </div>
         </div>
     </div>
-	<script>
-		function myFunction() {
-			var x = document.getElementById("myTopnav");
-			if (x.className === "topnav") {
-				x.className += " responsive";
-			} else {
-			x.className = "topnav";
-			}
-		}
-	</script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
 </body>
 
 </html>
